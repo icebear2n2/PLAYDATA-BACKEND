@@ -11,11 +11,11 @@ public class Example7 {
 
         for (int i=1; i<excel2.split("\n").length; i++) {
             String[] arr = excel2.split("\n");
-//            System.out.println(arr[i]);
 
             for (String line : Arrays.asList(arr[i])) {
                 String[] arr2 = line.split("\t");
                 Food food = new Food(arr2[0], arr2[1], arr2[2], arr2[3]);
+                
                 System.out.println("{" + "number: " + food.getNumber() + ", name: " + food.getName() + ", coordinate(x): " + food.getCoordinate() + ", region: " + food.getRegion() + "}");
             }
         }

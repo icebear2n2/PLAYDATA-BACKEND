@@ -16,7 +16,7 @@ public class Example7 {
                 String[] arr2 = line.split("\t");
                 Food food = new Food(arr2[0], arr2[1], arr2[2], arr2[3]);
                 
-                System.out.println("{" + "number: " + food.getNumber() + ", name: " + food.getName() + ", coordinate(x): " + food.getCoordinate() + ", region: " + food.getRegion() + "}");
+                System.out.println("{" + "number: " + food.getNumber() + ", name: " + food.getName() + ", coordinate: " + Arrays.toString(food.getCoordinate()) + ", region: " + food.getRegion() + "}");
             }
         }
     }
@@ -26,13 +26,16 @@ class Food {
 
     private String number;
     private String name;
-    private String coordinate;
+    private float[] coordinate;
     private String region;
 
     public Food(String number, String name, String coordinate, String region) {
         this.number = number;
         this.name = name;
-        this.coordinate = coordinate;
+        float[] tmp = new float[2];
+        tmp[0] = Float.parseFloat(coordinate.split(",")[0]);
+        tmp[1] = Float.parseFloat(coordinate.split(",")[1]);
+        this.coordinate = tmp;
         this.region = region;
     }
 
@@ -44,8 +47,8 @@ class Food {
         return name;
     }
 
-    public String getCoordinate() {
-        return coordinate.replace(",", ", coordinate(y): ");
+    public float[] getCoordinate() {
+        return coordinate;
     }
 
     public String getRegion() {

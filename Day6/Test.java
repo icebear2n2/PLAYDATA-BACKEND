@@ -32,24 +32,24 @@ public class Test {
 //    }
 //}
 
-class Member {
-    private String id;
-    private String password;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) {
-            System.out.println("중복된 아이디거나 비밀번호입니다");
-            return false;
-        }
-        ;
-        Member member = (Member) o;
-        return Objects.equals(id, member.id) && Objects.equals(password, member.password);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, password);
-    }
-}
+//class Member {
+//    private String id;
+//    private String password;
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) {
+//            System.out.println("중복된 아이디거나 비밀번호입니다");
+//            return false;
+//        }
+//        ;
+//        Member member = (Member) o;
+//        return Objects.equals(id, member.id) && Objects.equals(password, member.password);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id, password);
+//    }
+//}

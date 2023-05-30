@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -34,3 +31,25 @@ public class Test {
 //        this.name = name;
 //    }
 //}
+
+class Member {
+    private String id;
+    private String password;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) {
+            System.out.println("중복된 아이디거나 비밀번호입니다");
+            return false;
+        }
+        ;
+        Member member = (Member) o;
+        return Objects.equals(id, member.id) && Objects.equals(password, member.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, password);
+    }
+}

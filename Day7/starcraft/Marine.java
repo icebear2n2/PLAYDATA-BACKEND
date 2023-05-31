@@ -19,7 +19,7 @@ public class Marine extends Thread{
             Thread.sleep(10000);
             status = Status.CREATE;
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error");
         }
     }
 

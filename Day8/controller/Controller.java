@@ -29,6 +29,8 @@ public class Controller {
         }
         if (mode == 1) {// TODO: insert 기능 만들 것
             service.insert(sc.nextInt());
+
+
         } else if (mode == 2) {
             // TODO : 전체 찾기 기능 만들 것
         } else if (mode == 3) {

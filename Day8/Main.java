@@ -29,5 +29,8 @@ public class Main {
 // 하나의 리스트를 가지고 또 다른 리스트를 만들 때 사용
         List<Integer> collect = list.stream().map(el -> el * 2).collect(Collectors.toList());
         System.out.println(collect);
+
+        List<Integer> collect1 = list.stream().filter(el -> el % 2 == 0).map(el -> el * 2).collect(Collectors.toList());
+        System.out.println(collect1);
     }
 }

@@ -30,10 +30,13 @@ public class Exam1 {
         Member member = new Member(id, name);
 
         if (list.contains(member)) {
-            System.out.println("아이디나 비밀번호가 중복됩니다. 다시 입력해주세요.");
+            System.out.println("사용할 수 없는 아이디입니다. 다시 입력해주세요.");
+            System.out.println();
 
         } else {
             list.add(new Member(id, name));
+            System.out.println("회원가입이 완료되었습니다!!!!");
+            System.out.println();
         }
         controller();
     }
@@ -53,7 +56,7 @@ class Member {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Member member = (Member) o;
-        return Objects.equals(id, member.id) && Objects.equals(password, member.password);
+        return Objects.equals(id, member.id);
     }
 
     @Override
